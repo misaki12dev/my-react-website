@@ -6,9 +6,9 @@ function Experience() {
       <h2 className="text-bold text-center">Experiences</h2>
       <div className="experience mx-auto">
         <div className="flex justify-center gap-10 mx-auto">
-          <div className="left">
-            <h4>FrontEnd</h4>
-            <ul>
+          <div className="left border p-3 bg-[#6B7A8F] rounded-xl">
+            <h4 className="text-center text-xl pb-5">FrontEnd</h4>
+            <ul className=" grid grid-cols-2 gap-5">
               <li>HTML</li>
               <li>CSS</li>
               <li>JavaScript</li>
@@ -17,18 +17,24 @@ function Experience() {
               <li>React</li>
             </ul>
           </div>
-          <div className="right">
-            <h4>Backend</h4>
-            <ul>
-              <li></li>
+
+          <div className="left border p-3 bg-[#6B7A8F] rounded-xl">
+            <h4 className="text-center text-xl pb-5">Backend</h4>
+            <ul className=" grid grid-cols-2 gap-5">
+              <li>PHP</li>
+              <li>Ruby</li>
+              <li>Ruby on Rails</li>
+              <li>MySQL</li>
             </ul>
           </div>
-          <div className="center">
-            <h4>CMS</h4>
-            <ul>
+
+          <div className="left border p-3 bg-[#6B7A8F] rounded-xl">
+            <h4 className="text-center text-xl pb-5">CMS</h4>
+            <ul className=" grid grid-cols-2 gap-5">
               <li>WordPress</li>
               <li>MakeShop</li>
               <li>Shopify</li>
+              <li>FutureShop</li>
             </ul>
           </div>
         </div>

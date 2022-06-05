@@ -36,7 +36,7 @@ const data = [
 
 const Portfolio = () => {
   return (
-    <section className="container p-20 mx-auto">
+    <section id="portfolio" className="container p-20 mx-auto">
       <h2 className="">Portfolio</h2>
       <div className="max-w-screen-md mx-auto">
         <Swiper

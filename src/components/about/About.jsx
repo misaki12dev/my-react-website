@@ -3,7 +3,7 @@ import Profile from "../../assets/profile.jpg";
 
 const About = () => {
   return (
-    <section id="about" className="p-20 bg-dark text-white">
+    <section id="about" className="p-20 bg-[#DCC7AA] text-white">
       <div className="container mx-auto">
         <div className="grid grid-cols-2 sm:gap-24">
           <div className="mx-auto">
@@ -26,12 +26,11 @@ const About = () => {
                 <br />
                 学生の頃から興味のあったWEB業界で働くため、
                 <br />
-                WEB制作を独学。その後、WEB制作コーダーとして１年半勤務。<br/>
+                WEB制作を独学。その後、WEB制作コーダーとして１年半勤務。
+                <br />
                 現在は、さらにスキルアップ・仕事の幅を広げるため、バックエンドエンジニアを目指してプログラミングを学んでいます！
               </p>
-              <button class="bg-coral btn-primary">
-                Contact
-              </button>
+              <button className="bg-coral btn-primary">Contact</button>
             </div>
           </div>
         </div>

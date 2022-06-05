@@ -4,13 +4,17 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
+
+html {
+  scroll-behavior: smooth;
+}
 /* 共通style */
 @layer base {
   h1 {
     @apply text-2xl text-center;
   }
   h2 {
-    @apply text-2xl text-center font-bold;
+    @apply text-2xl text-center font-bold pb-10;
   }
 }
 
@@ -22,29 +26,32 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-nav {
-  display: flex;
-  flex-direction: column;
-  background: rgb(26, 38, 71);
-  border-radius: 20px;
-  position: fixed;
-  right: 20px;
-  top: 20px;
+a {
+  scroll-behavior: smooth;
 }
+
+nav {
+  background: rgb(0, 0, 0, 0.4);
+  backdrop-filter: blur(15px);
+}
+
 nav a {
-  font-size: 29px;
+  background: transparent;
+  font-size: 1.1rem;
   display: inline-block;
-  padding-bottom: 8px;
+  padding: 0.9rem;
   color: rgb(239, 231, 231);
   text-align: center;
   margin: 0 auto;
+  border-radius: 50%;
+  gap: 15px;
 }
 
-.sns {
-  opacity: 0;
+nav a:hover {
+  background: rgb(0, 0, 0, 0.2);
 }
 
-.contact__icon:hover + .sns {
-  opacity: 1;
-  pointer-events: auto;
+nav a.active {
+  background: #1f1f38;
+  color: white;
 }
