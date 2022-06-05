@@ -10,8 +10,8 @@ const App = () => {
   return (
     <>
       <Header />
-      <Experience />
       <Portfolio />
+      <Experience />
       <About />
       <Contact />
       <Footer />
