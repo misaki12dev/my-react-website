@@ -5,11 +5,13 @@ import Experience from "./components/experience/Experience";
 import Portfolio from "./components/portfolio/Portfolio";
 import Footer from "./components/footer/Footer";
 import Contact from "./components/contact/Contact";
+import Hero from "./components/hero/Hero";
 
 const App = () => {
   return (
     <>
       <Header />
+      <Hero />
       <Portfolio />
       <Experience />
       <About />

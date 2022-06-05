@@ -18,7 +18,7 @@ const About = () => {
             <div className="flex flex-col">
               <h3 className="text-3xl pb-3">Misaki Kawano</h3>
               <p className="mb-8">
-                1994年生まれ　神奈川県在住
+                1994年生まれ 神奈川県在住
                 <br />
                 大学を卒業後、不動産業界・建築業界を経て、
                 <br />
@@ -29,7 +29,7 @@ const About = () => {
                 WEB制作を独学。その後、WEB制作コーダーとして１年半勤務。<br/>
                 現在は、さらにスキルアップ・仕事の幅を広げるため、バックエンドエンジニアを目指してプログラミングを学んでいます！
               </p>
-              <button class="bg-coral text-black hover:bg-white font-bold py-2 px-4 rounded">
+              <button class="bg-coral btn-primary">
                 Contact
               </button>
             </div>

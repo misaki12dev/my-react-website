@@ -1,53 +1,48 @@
 import React from "react";
+import {
+  FaGithub,
+  FaTwitter,
+  FaHome,
+  FaUserCircle,
+  FaBookOpen,
+  FaMailBulk,
+  FaDeezer,
+} from "react-icons/fa";
+import Wantedly from "../../assets/wantedly_icon.png";
 
 const Header = () => {
   return (
-    <nav className="flex items-center justify-between flex-wrap p-6">
-      <div className="flex items-center flex-shrink-0 text-zinc-900 mr-6">
-        <span className="font-semibold text-xl tracking-tight">Misaki K</span>
+    <div className="header w-100 relative">
+      <nav className="py-4  w-[50px]">
+        <a href="#home">
+          <FaHome />
+        </a>
+        <a href="">
+          <FaBookOpen />
+        </a>
+        <a href="">
+          <FaDeezer />
+        </a>
+        <a href="">
+          <FaUserCircle />
+        </a>
+        <a href="" className="contact__icon">
+          <FaMailBulk />
+        </a>
+      </nav>
+
+      <div className="sns">
+        <a href="http://" target="_blank" rel="noopener noreferrer">
+          <FaGithub />
+        </a>
+        <a href="http://" target="_blank" rel="noopener noreferrer">
+          <FaTwitter />
+        </a>
+        <a href="http://" target="_blank" rel="noopener noreferrer">
+          <img className="max-w-[24px]" src={Wantedly} alt="" />
+        </a>
       </div>
-      <div className="block lg:hidden">
-        <button className="flex items-center px-3 py-2 border rounded text-black-200 border-teal-400 hover:text-teal-200 hover:border-white">
-          <svg
-            className="fill-current h-3 w-3"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <title>Menu</title>
-            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-          </svg>
-        </button>
-      </div>
-      <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-        <div className="text-sm lg:flex-grow">
-          <a
-            href="#about"
-            className="block mt-4 lg:inline-block lg:mt-0 text-zinc-900 hover:text-white mr-4"
-          >
-            About
-          </a>
-          <a
-            href="#experience"
-            className="block mt-4 lg:inline-block lg:mt-0 text-zinc-900 hover:text-white mr-4"
-          >
-            Experience
-          </a>
-          <a
-            href="#portfolio"
-            className="block mt-4 lg:inline-block lg:mt-0 text-zinc-900 hover:text-white mr-4"
-          >
-            Portfolio
-          </a>
-          <a
-            href="#contact"
-            className="block mt-4 lg:inline-block lg:mt-0 text-zinc-900 hover:text-teal-200"
-          >
-            Contact
-          </a>
-        </div>
-        <div></div>
-      </div>
-    </nav>
+    </div>
   );
 };
 

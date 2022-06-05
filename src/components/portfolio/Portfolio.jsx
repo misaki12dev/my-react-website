@@ -37,14 +37,14 @@ const data = [
 const Portfolio = () => {
   return (
     <section className="container p-20 mx-auto">
-      <h1 className="py-20">ポートフォリオ</h1>
+      <h2 className="">Portfolio</h2>
       <div className="max-w-screen-md mx-auto">
         <Swiper
           modules={[Navigation, Pagination, A11y]}
           spaceBetween={10}
           slidesPerView={1}
-          // navigation
-          // pagination={{ clickable: true }}
+          navigation
+          pagination={{ clickable: true }}
           onSlideChange={() => console.log("slide change")}
           onSwiper={(swiper) => console.log(swiper)}
         >
