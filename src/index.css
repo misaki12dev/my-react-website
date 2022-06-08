@@ -4,17 +4,22 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
-
 html {
   scroll-behavior: smooth;
 }
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #fff;
+}
+
 /* 共通style */
 @layer base {
   h1 {
     @apply text-2xl text-center;
   }
   h2 {
-    @apply text-2xl text-center font-bold pb-10;
+    @apply text-2xl text-center font-bold pb-10 text-gray-700;
   }
 }
 
@@ -22,36 +27,61 @@ html {
   @apply px-6 py-2.5 text-white font-medium text-xs leading-tight uppercase rounded shadow-md  hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out;
 }
 
-body {
-  font-family: "Poppins", sans-serif;
-}
-
-a {
-  scroll-behavior: smooth;
-}
-
-nav {
-  background: rgb(0, 0, 0, 0.4);
-  backdrop-filter: blur(15px);
+.hero {
+  height: 80vh;
+  padding: 20px;
+  background-image: url("/src/assets/right-bg.png");
+  background-repeat: no-repeat;
+  background-size: 70% 90%;
+  background-position: right 0% top 0;
 }
 
 nav a {
   background: transparent;
-  font-size: 1.1rem;
   display: inline-block;
   padding: 0.9rem;
-  color: rgb(239, 231, 231);
-  text-align: center;
+  height: 90px;
+}
+
+nav a svg {
   margin: 0 auto;
-  border-radius: 50%;
-  gap: 15px;
 }
 
 nav a:hover {
   background: rgb(0, 0, 0, 0.2);
 }
 
-nav a.active {
-  background: #1f1f38;
-  color: white;
+.header-bg a.active {
+  background: #fff;
+  color: #666;
+}
+
+.header {
+  position: fixed;
+  height: 90px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  transition: 0.3s ease-in;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.header-bg {
+  background: #fcb2af;
+  box-shadow: 0 3px 1rem rgb(0, 0, 0, 0.2);
+}
+
+.sns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  right: 14px;
+  bottom: 20rem;
+  position: fixed;
+  z-index: 999;
+  font-size: 24px;
+  color: rgb(47, 46, 46);
 }

@@ -2,9 +2,9 @@ import React from 'react'
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-20">
-      <h2 className="">Contact</h2>
-      <div className="contact__box shadow-md rounded-xl max-w-lg mx-auto">
+    <section id="contact" className="py-20 bg-primary_color">
+      <h2 className="font-bold">CONTACT</h2>
+      <div className="contact__box bg-white shadow-md rounded-xl max-w-lg mx-auto">
         <form action="" className="flex flex-col gap-10 p-10 max-auto">
           <input
             className="border rounded p-3"
@@ -27,11 +27,8 @@ const Contact = () => {
             rows="7"
             required
           ></textarea>
-          
-          <button
-            type="submit"
-            className="btn-primary bg-coral"
-          >
+
+          <button type="submit" className="btn-primary bg-secondary_color">
             Send Message
           </button>
         </form>
