@@ -3,7 +3,7 @@ import React from 'react'
 const Contact = () => {
   return (
     <section id="contact" className="py-20 bg-primary_color">
-      <h2 className="font-bold">CONTACT</h2>
+      <h2>CONTACT</h2>
       <div className="contact__box bg-white shadow-md rounded-xl max-w-lg mx-auto">
         <form action="" className="flex flex-col gap-10 p-10 max-auto">
           <input

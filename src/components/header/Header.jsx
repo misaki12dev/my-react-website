@@ -1,9 +1,5 @@
 import React from "react";
-import {
-  FaHome,
-  FaBookOpen,
-  FaDeezer,
-} from "react-icons/fa";
+import { FaHome, FaBookOpen, FaDeezer } from "react-icons/fa";
 import { AiOutlineUser } from "react-icons/ai";
 import { HiOutlineMail } from "react-icons/hi";
 import { useState } from "react";
@@ -24,7 +20,7 @@ const Header = () => {
 
   return (
     <div className={color ? "header header-bg" : "header"}>
-      <nav className="flex fixed w-full justify-start z-10">
+      <nav className="flex fixed w-full justify-end z-10">
         <ul class="flex">
           <li className="">
             <a
@@ -80,14 +76,6 @@ const Header = () => {
           </li>
         </ul>
       </nav>
-
-      {/* <div className="sns ">
-        <ul className="flex w-full jusitfy-end">
-          <li><a href="#home"><FaGithub/></a></li>
-          <li><a href="#home"><FaTwitter/></a></li>
-          <li><a href="#home"><img src={Wantedly} alt="" /></a></li>
-        </ul>
-      </div> */}
     </div>
   );
 };

@@ -3,9 +3,9 @@ import Profile from "../../assets/profile.jpg";
 
 const About = () => {
   return (
-    <section id="about" className=" pb-20  bg-primary_color text-white">
-      <h2>ABOUT</h2>
-      <div className="w-full mx-auto bg-white rounded-b-3xl">
+    <section id="about" className=" pb-20  bg-primary_color">
+      <div className="mx-auto bg-white rounded-b-3xl p-10 mx-20">
+        <h2>ABOUT</h2>
         <div className="grid grid-cols-2 sm:gap-24">
           <div className="mx-auto">
             <img

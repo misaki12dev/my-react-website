@@ -1,46 +1,60 @@
 import React from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
 
-function Experience() {
+export const Experience = () => {
+  const allExperiences = [
+    {
+      icon: "✨",
+      label: "FRONTEND",
+      item: ["HTML", "CSS", "jQuery", "Bootstrap", "React", "Tailwind"],
+    },
+    { icon: "💻", label: "BACKEND", item: ["PHP", "Ruby", "Ruby On Rails"] },
+    { icon: "🌵", label: "CMS", item: ["WordPress", "MakeShop", "Shopify"] },
+  ];
+  const tabs = allExperiences;
+  const [selectedTab, setSelectedTab] = useState(tabs[0]);
+
   return (
-    <section id="experience" className="py-20">
-      <h2 className="text-bold text-center">EXPERIENCES</h2>
-      <div className="experience mx-auto">
-        <div className=" flex justify-center gap-10 mx-auto">
-          <div className="left border p-3 bg-primary_color rounded-xl">
-            <h4 className="text-center text-xl pb-5">FrontEnd</h4>
-            <ul className=" grid grid-cols-2 gap-5">
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-              <li>Bootstrap</li>
-              <li>TailWind</li>
-              <li>React</li>
-            </ul>
-          </div>
-
-          <div className="left border p-3 bg-primary_color rounded-xl">
-            <h4 className="text-center text-xl pb-5">Backend</h4>
-            <ul className=" grid grid-cols-2 gap-5">
-              <li>PHP</li>
-              <li>Ruby</li>
-              <li>Ruby on Rails</li>
-              <li>MySQL</li>
-            </ul>
-          </div>
-
-          <div className="left border p-3 bg-primary_color rounded-xl">
-            <h4 className="text-center text-xl pb-5">CMS</h4>
-            <ul className=" grid grid-cols-2 gap-5">
-              <li>WordPress</li>
-              <li>MakeShop</li>
-              <li>Shopify</li>
-              <li>FutureShop</li>
-            </ul>
-          </div>
-        </div>
+    <div id="experience" className="pb-20">
+      <h2>EXPERIENCES</h2>
+      <div className="card">
+        <nav>
+          <ul>
+            {tabs.map((item) => (
+              <li
+                key={item.label}
+                className={item === selectedTab ? "selected" : ""}
+                onClick={() => setSelectedTab(item)}
+              >
+                {`${item.icon} ${item.label}`}
+                {item === selectedTab ? (
+                  <motion.div className="underline" layoutId="underline" />
+                ) : null}
+              </li>
+            ))}
+          </ul>
+        </nav>
+        <main>
+          <AnimatePresence exitBeforeEnter>
+            <motion.div
+              key={selectedTab ? selectedTab.label : "empty"}
+              initial={{ y: 10, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: -10, opacity: 0 }}
+              transition={{ duration: 0.2 }}
+            >
+              <ul>
+                {selectedTab.item.map((skill, i) => (
+                  <li key={i}>{skill}</li>
+                ))}
+              </ul>
+            </motion.div>
+          </AnimatePresence>
+        </main>
       </div>
-    </section>
+    </div>
   );
-}
+};
 
 export default Experience;
