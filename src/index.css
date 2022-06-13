@@ -37,43 +37,6 @@ body {
   background-position: right 0% top 0;
 }
 
-nav a {
-  background: transparent;
-  display: inline-block;
-  padding: 0.9rem;
-  height: 90px;
-}
-
-nav a svg {
-  margin: 0 auto;
-}
-
-nav a:hover {
-  background: rgb(0, 0, 0, 0.2);
-}
-
-.header-bg a.active {
-  background: #fff;
-  color: #666;
-}
-
-.header {
-  position: fixed;
-  height: 90px;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  transition: 0.3s ease-in;
-  overflow: hidden;
-  background-color: transparent;
-}
-
-.header-bg {
-  background: #fcb2af;
-  box-shadow: 0 3px 1rem rgb(0, 0, 0, 0.2);
-}
-
 .sns {
   display: flex;
   flex-direction: column;
@@ -89,7 +52,7 @@ nav a:hover {
 
 #experience .card {
   margin: 0 auto;
-  width: 480px;
+  max-width: 480px;
   height: 360px;
   border-radius: 10px;
   background: white;
@@ -135,11 +98,6 @@ main {
   font-size: 14px;
 }
 
-#experience ul {
-  display: flex;
-  width: 100%;
-}
-
 #experience li {
   border-radius: 5px;
   border-bottom-left-radius: 0;
@@ -148,7 +106,7 @@ main {
   padding: 10px 15px;
   position: relative;
   background: white;
-  display: flex;
+  /* display: flex; */
   justify-content: space-between;
   align-items: center;
   flex: 1;
@@ -166,7 +124,7 @@ main {
   background: pink;
 }
 
-#experience li.selected {
+li.selected {
   background: #eee;
 }
 

@@ -2,12 +2,11 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <section id="home" className="backdrop-blur-lg hero py-20 mx-auto">
-      <div className="relative h-full">
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-          <span>HELLO</span><br />
-          <span>I'm</span><br />
-          <span>Misaki Kawano</span>
+    <section id="home" className=" hero py-20 mx-auto">
+      <div className="w-full h-screen flex items-center px-4">
+        <div className="uppercase text-center font-extrabold">
+          <h1 className="text-4xl">Hello</h1>
+          <h2 className="text-6xl text-black">I'm Misaki</h2>
         </div>
       </div>
     </section>

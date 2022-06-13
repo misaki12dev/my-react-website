@@ -12,15 +12,24 @@ export const Experience = () => {
     { icon: "💻", label: "BACKEND", item: ["PHP", "Ruby", "Ruby On Rails"] },
     { icon: "🌵", label: "CMS", item: ["WordPress", "MakeShop", "Shopify"] },
   ];
-  const tabs = allExperiences;
+
+  const [frontend, backend, cms] = allExperiences;
+  const tabs = [frontend, backend, cms];
   const [selectedTab, setSelectedTab] = useState(tabs[0]);
 
   return (
-    <div id="experience" className="pb-20">
+    <motion.div
+      id="experience"
+      className="pb-20 mr-3 ml-3"
+      animate={{ opacity: 1 }}
+      initial={{ opacity: 0 }}
+      exit={{ opacity: 1 }}
+      transition={{ duration: 1.0 }}
+    >
       <h2>EXPERIENCES</h2>
       <div className="card">
         <nav>
-          <ul>
+          <ul className="flex">
             {tabs.map((item) => (
               <li
                 key={item.label}
@@ -44,7 +53,7 @@ export const Experience = () => {
               exit={{ y: -10, opacity: 0 }}
               transition={{ duration: 0.2 }}
             >
-              <ul>
+              <ul className="grid grid-cols-3">
                 {selectedTab.item.map((skill, i) => (
                   <li key={i}>{skill}</li>
                 ))}
@@ -53,7 +62,7 @@ export const Experience = () => {
           </AnimatePresence>
         </main>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
