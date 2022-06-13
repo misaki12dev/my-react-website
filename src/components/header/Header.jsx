@@ -1,10 +1,16 @@
 import React from "react";
 import { useState } from "react";
-import MenuItems from "./MenuItems";
+import MobileMenu from "./MobileMenu";
 import { BiMenuAltRight } from "react-icons/bi";
-import { FaHome, FaBookOpen, FaDeezer } from "react-icons/fa";
+import {
+  FaHome,
+  FaBookOpen,
+  FaDeezer,
+  FaGithub,
+} from "react-icons/fa";
 import { AiOutlineUser } from "react-icons/ai";
 import { HiOutlineMail } from "react-icons/hi";
+import Wantedly from "../../assets/wantedly_icon.png";
 
 const Header = () => {
   const [active, setActive] = useState(false);
@@ -18,16 +24,14 @@ const Header = () => {
       <div className="text-2xl font-bold text-center">
         <h1>Portfolio</h1>
       </div>
-
-      <nav>
+      <nav className="flex">
         <div className="absolute right-6 md:hidden top-4 scale-150">
           <BiMenuAltRight
             onClick={showMenu}
             className="scale-150 cursor-pointer"
           />
         </div>
-
-        <ul className="hidden md:flex p-6 gap-8 uppercase bg-white/10">
+        <ul className="hidden md:flex p-6 gap-8 pr-20">
           <li>
             <a href="#home">
               <FaHome className="mx-auto" />
@@ -59,8 +63,15 @@ const Header = () => {
             </a>
           </li>
         </ul>
-
-        <MenuItems showMenu={showMenu} active={active} />
+        <div className="hidden md:flex items-center gap-3 ">
+          <a href="#home">
+            <FaGithub />
+          </a>
+          <a href="#home">
+            <img className="w-[25px]" src={Wantedly} alt="" />
+          </a>
+        </div>
+        <MobileMenu showMenu={showMenu} active={active} />
       </nav>
     </div>
   );

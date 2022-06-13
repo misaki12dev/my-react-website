@@ -37,19 +37,6 @@ body {
   background-position: right 0% top 0;
 }
 
-.sns {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.8rem;
-  right: 14px;
-  bottom: 20rem;
-  position: fixed;
-  z-index: 999;
-  font-size: 24px;
-  color: rgb(47, 46, 46);
-}
-
 #experience .card {
   margin: 0 auto;
   max-width: 480px;
